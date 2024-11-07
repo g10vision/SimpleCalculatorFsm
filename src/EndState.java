@@ -1,14 +1,14 @@
 public class EndState implements State {
     @Override
-    public void handle(Context context, char input) {
-        if (context.operation != '\0') {
-            if (context.operation == '+') {
-                context.total += context.currentNumber;
-            } else if (context.operation == '-') {
-                context.total -= context.currentNumber;
+    public void handle(Evaluator evaluator, char input) {
+        if (evaluator.operation != '\0') {
+            if (evaluator.operation == '+') {
+                evaluator.total += evaluator.currentNumber;
+            } else if (evaluator.operation == '-') {
+                evaluator.total -= evaluator.currentNumber;
             }
         } else {
-            context.total = context.currentNumber; // Finalize total
+            evaluator.total = evaluator.currentNumber; // Finalize total
         }
         //System.out.println("Final result: " + context.total);
     }

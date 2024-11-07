@@ -11,11 +11,11 @@ public class Context {
         public void setState(State state) {
             this.state = state;
         }
-
+    /**
         public void process(char input) {
             //System.out.println(this);
             state.handle(this, input);
-        }
+        }**/
 
         @Override
         public String toString() {

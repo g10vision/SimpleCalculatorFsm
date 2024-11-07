@@ -1,11 +1,11 @@
 public class OperatorState implements State {
     @Override
-    public void handle(Context context, char input) {
+    public void handle(Evaluator evaluator, char input) {
         if (Character.isDigit(input)) {
-            context.currentNumber = input - '0';
-            context.setState(new IntegerState());
+            evaluator.currentNumber = input - '0';
+            evaluator.setState(new IntegerState());
         }
         else
-            context.setState(new ErrorState(input));
+            evaluator.setState(new ErrorState(input));
     }
 }
