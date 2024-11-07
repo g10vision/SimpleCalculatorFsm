@@ -8,7 +8,7 @@ public class ErrorState implements State {
     @Override
     public void handle(Evaluator evaluator, char input) {
         System.out.println("Error: Invalid input encountered - '" + invalidChar + "'");
-        evaluator.setState(new EndState());
+        //evaluator.setState(new EndState());
         //throw new RuntimeException("Error: Invalid input encountered - '" + invalidChar + "'");
     }
 }
